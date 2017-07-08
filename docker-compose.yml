@@ -7,6 +7,6 @@ nginx:
     links:
         - fpm
 fpm:
-    image: php:fpm
+    image: php:7.1.6-fpm
     volumes:
         - ./web:/usr/share/nginx/web

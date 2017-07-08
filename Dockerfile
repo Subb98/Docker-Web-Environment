@@ -1,2 +1,2 @@
 FROM nginx:1.13
-ADD ./default.conf /etc/nginx/conf.d/
+ADD ./nginx/default.conf /etc/nginx/conf.d/

@@ -1,0 +1,12 @@
+nginx:
+    build: .
+    ports:
+        - "80:80"
+    volumes:
+        - ./web:/usr/share/nginx/html/
+    links:
+        - fpm
+fpm:
+    image: php:fpm
+    volumes:
+        - ./web:/usr/share/nginx/html/

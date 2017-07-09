@@ -1,12 +1,12 @@
-nginx:
-    build: .
-    ports:
-        - "80:80"
-    volumes:
-        - ./web:/usr/share/nginx/web
-    links:
-        - fpm
-fpm:
-    image: php:7.1.6-fpm
-    volumes:
-        - ./web:/usr/share/nginx/web
+version: "2"
+services:
+    nginx:
+        build: .
+        ports:
+            - "80:80"
+        volumes:
+            - ./web:/var/www/html
+    fpm:
+        image: php:7.1.6-fpm
+        volumes:
+            - ./web:/var/www/html
